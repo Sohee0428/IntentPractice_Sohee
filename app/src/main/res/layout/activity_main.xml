@@ -14,5 +14,17 @@
         android:text="다른 화면으로 이동"
         android:id="@+id/moveToOtherBtn"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전달할 메세지 입력"
+        android:id="@+id/messageEdt"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메세지를 다른 다른 화면으로 전달"
+        android:id="@+id/sendMessageBtn"/>
+
 
 </LinearLayout>
