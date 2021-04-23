@@ -41,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text = "고양이"
-            android:textSize="17sp"/>
+            android:textSize="17sp"
+            android:id="@+id/nicknameTxt"/>
 
         <TextView
             android:layout_width="0dp"
@@ -51,7 +52,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="닉네임 변경"/>
+            android:text="닉네임 변경"
+            android:id="@+id/editNicknameBtn"/>
 
     </LinearLayout>
 
