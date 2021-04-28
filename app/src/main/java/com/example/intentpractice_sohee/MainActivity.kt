@@ -23,34 +23,35 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this, OtherActivity::class.java)
             startActivity(myIntent)
 
+        }
 
-            sendMessageBtn.setOnClickListener {
+
+
+        sendMessageBtn.setOnClickListener {
 
 //            입력한 내용을 변수에 저장
 
-                val inputMessage = messageEdt.text.toString()
+            val inputMessage = messageEdt.text.toString()
 
 //            비행기 티켓 발권
 
-                val myIntent = Intent(this, MessageActivity::class.java)
+            val myIntent = Intent(this, MessageActivity::class.java)
 
 //            수하물 첨부
 
-                myIntent.putExtra("message", inputMessage)
+            myIntent.putExtra("message", inputMessage)
 
 //            실제 출발
 
-                startActivity(myIntent)
-            }
+            startActivity(myIntent)
+        }
 
 
-            editNicknameBtn.setOnClickListener{
 
-                val myIntent = Intent(this, EditNicknameActivity::class.java)
-                startActivityForResult(myIntent,REQUEST_FOR_NICKNAME)
-            }
+        editNicknameBtn.setOnClickListener{
 
-
+            val myIntent = Intent(this, EditNicknameActivity::class.java)
+            startActivityForResult(myIntent,REQUEST_FOR_NICKNAME)
         }
     }
 
