@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         dialBtn.setOnClickListener {
 
 
-//            phoneNuumEdt에 입력한 전화번호를 받아서 => 해당 번호에 전화 연결
+//            phoneNumEdt에 입력한 전화번호를 받아서 => 해당 번호에 전화 연결
 
             val inputPhoneNum = phoneNumEdt.text.toString()
 
@@ -75,6 +75,22 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(myIntent)
         }
+
+        callBtn.setOnClickListener {
+
+
+            val inputPhoneNum = phoneNumEdt.text.toString()
+
+            val myUri = Uri.parse("tel : ${inputPhoneNum}")
+
+
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+
+            startActivity(myIntent)
+
+
+        }
+
     }
 
 
