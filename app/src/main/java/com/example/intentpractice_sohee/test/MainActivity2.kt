@@ -11,6 +11,8 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
+        val REQUEST_FOR_NICKNAME = 1005
+
         moveToOtherBtn2.setOnClickListener {
 
             val myIntent = Intent(this, OtherActivity2::class.java)
@@ -24,6 +26,12 @@ class MainActivity2 : AppCompatActivity() {
 
             myIntent.putExtra("message", message)
             startActivity(myIntent)
+        }
+
+        editNicknameBtn2.setOnClickListener {
+
+            val myIntent = Intent(this, NicknameEditActivity2::class.java)
+            startActivityForResult(myIntent, REQUEST_FOR_NICKNAME)
         }
     }
 }
