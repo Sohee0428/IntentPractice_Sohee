@@ -7,11 +7,12 @@ import com.example.intentpractice_sohee.R
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
+
+    val REQUEST_FOR_NICKNAME = 1005
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
-        val REQUEST_FOR_NICKNAME = 1005
 
         moveToOtherBtn2.setOnClickListener {
 
@@ -32,6 +33,21 @@ class MainActivity2 : AppCompatActivity() {
 
             val myIntent = Intent(this, NicknameEditActivity2::class.java)
             startActivityForResult(myIntent, REQUEST_FOR_NICKNAME)
+        }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_FOR_NICKNAME) {
+
+            if(resultCode == RESULT_OK) {
+
+                val newNickname = data?.getStringExtra("nickname")
+
+                nicknameTxt2.text = newNickname
+            }
         }
     }
 }
