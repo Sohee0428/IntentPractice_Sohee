@@ -1,6 +1,7 @@
 package com.example.intentpractice_sohee.test
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.intentpractice_sohee.R
@@ -33,6 +34,40 @@ class MainActivity2 : AppCompatActivity() {
 
             val myIntent = Intent(this, NicknameEditActivity2::class.java)
             startActivityForResult(myIntent, REQUEST_FOR_NICKNAME)
+        }
+
+        dialBtn2.setOnClickListener {
+            val inputPhoneNumber = phoneNumEdt2.text.toString()
+            val myUri = Uri.parse("tel:$inputPhoneNumber")
+            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+            startActivity(myIntent)
+        }
+
+        callBtn2.setOnClickListener {
+            val inputPhoneNumber = phoneNumEdt2.text.toString()
+            val myUri = Uri.parse("tel:$inputPhoneNumber")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+        }
+
+        smsBtn2.setOnClickListener {
+            val inputPhoneNumber = phoneNumEdt2.text.toString()
+            val myUri = Uri.parse("smsto:$inputPhoneNumber")
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+             myIntent.putExtra("sms_body","미리 내용 입력")
+            startActivity(myIntent)
+        }
+
+        naverWebBtn2.setOnClickListener {
+            val myUri = Uri.parse("https://naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        kakaoStoreBtn2.setOnClickListener {
+            val myUri = Uri.parse("market://details?id=kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
         }
 
     }

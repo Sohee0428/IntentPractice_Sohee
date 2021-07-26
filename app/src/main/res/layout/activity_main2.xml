@@ -45,6 +45,7 @@
         android:textSize="17sp"
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintTop_toBottomOf="@id/nicknameTxt"
+        app:layout_constraintBottom_toTopOf="@id/phoneNumTxt"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
     <Button
@@ -54,5 +55,58 @@
         android:text="닉네임 변경"
         app:layout_constraintTop_toBottomOf="@id/nicknameTxt"
         app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/phoneNumTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연결할 전화번호"
+        app:layout_constraintTop_toBottomOf="@id/editNicknameBtn2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/phoneNumEdt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호 입력"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumTxt"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/dialBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화 걸기 (DIAL)"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumEdt2"/>
+
+    <Button
+        android:id="@+id/callBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화 걸기 (CALL)"
+        app:layout_constraintTop_toBottomOf="@id/dialBtn2"/>
+
+    <Button
+        android:id="@+id/smsBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자 전송 화면으로 이동"
+        app:layout_constraintTop_toBottomOf="@id/callBtn2"/>
+
+    <Button
+        android:id="@+id/naverWebBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네이버 연결"
+        app:layout_constraintTop_toBottomOf="@id/smsBtn2"/>
+
+    <Button
+        android:id="@+id/kakaoStoreBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오톡 다운로드"
+        app:layout_constraintTop_toBottomOf="@id/naverWebBtn2"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
