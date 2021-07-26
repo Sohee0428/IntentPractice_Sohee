@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
             val inputPhoneNum = phoneNumEdt.text.toString()
 
-            val myUri = Uri.parse("tel : ${inputPhoneNum}")
+            val myUri = Uri.parse("tel: ${inputPhoneNum}")
 
 
             val myIntent = Intent(Intent.ACTION_CALL, myUri)
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
             val inputPhoneNum = phoneNumEdt.text.toString()
 
-            val myUri = Uri.parse("smsto : ${inputPhoneNum}")
+            val myUri = Uri.parse("smsto: ${inputPhoneNum}")
 
 
             val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
